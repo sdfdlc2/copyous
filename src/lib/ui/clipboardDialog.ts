@@ -188,6 +188,7 @@ export class ClipboardDialog extends St.Widget {
 	override destroy() {
 		(Main.inputMethod as Clutter.InputMethod).disconnectObject(this);
 		this._ibusManager.disconnectObject(this);
+		this.settings.disconnectObject(this);
 
 		super.destroy();
 	}

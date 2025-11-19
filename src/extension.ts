@@ -84,6 +84,7 @@ export default class CopyousExtension extends Extension {
 		// Database
 		this.entryTracker = new ClipboardEntryTracker(this);
 		this.initEntryTracker().catch(error);
+		this.initHistoryTimeout().catch(error);
 
 		this.settings = this.getSettings();
 		this.settings.connectObject(
@@ -91,11 +92,10 @@ export default class CopyousExtension extends Extension {
 			this.initEntryTracker.bind(this),
 			'changed::in-memory-database',
 			this.initEntryTracker.bind(this),
+			'changed::history-time',
+			this.initHistoryTimeout.bind(this),
 			this,
 		);
-
-		this.initHistoryTimeout().catch(error);
-		this.settings.connect('changed::history-time', this.initHistoryTimeout.bind(this));
 
 		// Clipboard Manager
 		this.clipboardManager = new ClipboardManager(this, this.entryTracker);

@@ -245,9 +245,8 @@ export class LanguageButton extends St.Button {
 		this._popupMenu = new LanguagePopupMenu(ext, this, 0.5, St.Side.TOP);
 		const menuManager = new PopupMenu.PopupMenuManager(this);
 		menuManager.addMenu(this._popupMenu, 0);
-		this.connect('destroy', () => this._popupMenu.destroy());
 
-		this._popupMenu.connectObject('language', (_obj: unknown, l: Language) => (this.language = l));
+		this._popupMenu.connectObject('language', (_obj: unknown, l: Language) => (this.language = l), this);
 	}
 
 	get language() {
@@ -261,6 +260,11 @@ export class LanguageButton extends St.Button {
 
 	override vfunc_clicked(_clicked_button: number) {
 		this._popupMenu.open(BoxPointer.PopupAnimation.FULL);
+	}
+
+	override destroy() {
+		this._popupMenu.destroy();
+		super.destroy();
 	}
 }
 
