@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-25 02:28+0000\n"
+"POT-Creation-Date: 2025-11-25 22:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -653,7 +653,7 @@ msgid "Custom"
 msgstr ""
 
 #: src/lib/preferences/dependencies/dependencies.ts:156
-#: src/lib/preferences/dependencies/dependencies.ts:433
+#: src/lib/preferences/dependencies/dependencies.ts:438
 msgid "Highlight.js Not Installed"
 msgstr ""
 
@@ -684,43 +684,46 @@ msgid "Install"
 msgstr ""
 
 #: src/lib/preferences/dependencies/dependencies.ts:337
-#: src/lib/preferences/dependencies/dependencies.ts:431
+#: src/lib/preferences/dependencies/dependencies.ts:436
 msgid "Libgda Not Installed"
 msgstr ""
 
 #: src/lib/preferences/dependencies/dependencies.ts:339
 msgid ""
 "Libgda is required to store clipboard history between sessions. Install "
-"either libgda 5.0 or 6.0 with SQLite support to use this feature."
+"either libgda 5.0 or 6.0 with SQLite support to use this feature. After "
+"installing libgda you will need to log out or restart your system."
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:341
+#: src/lib/preferences/dependencies/dependencies.ts:343
 msgid "Install Libgda"
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:349
-#: src/lib/preferences/dependencies/dependencies.ts:432
+#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:437
 msgid "GSound Not Installed"
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:350
+#: src/lib/preferences/dependencies/dependencies.ts:353
 msgid ""
-"GSound is required to play sound effects. Install GSound to use this feature."
+"GSound is required to play sound effects. Install GSound to use this "
+"feature. After installing GSound you will need to log out or restart your "
+"system."
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:356
 msgid "Install GSound"
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:364
+#: src/lib/preferences/dependencies/dependencies.ts:369
 msgid "Starting Highlight.js Download"
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:389
 msgid "Successfully Installed Highlight.js"
 msgstr ""
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:389
 msgid "Error Installing Highlight.js"
 msgstr ""
 
