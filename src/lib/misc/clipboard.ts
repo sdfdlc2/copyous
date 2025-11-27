@@ -373,7 +373,8 @@ export class ClipboardManager extends GObject.Object {
 				const path = getImagesPath(this.ext);
 				if (!path.query_exists(null)) path.make_directory_with_parents(null);
 
-				const image = path.get_child(content.checksum);
+				const extension = content.mimetype.split('/')[1]!;
+				const image = path.get_child(`${content.checksum}.${extension}`);
 				if (!image.query_exists(null)) {
 					await image.replace_contents_async(
 						content.data,
